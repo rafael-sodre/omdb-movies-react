@@ -1,16 +1,15 @@
-const Header = ({ handleOnSubmit, termoBusca, handleOnChange }) => {
+const Header = ({ handleOnSubmit, termoBusca, handleOnChangeTermo, handleOnChangeAno, anoBusca,  }) => {
     return(
-        <header>
+        <>
+            <header>
             <h1>OMDB API React</h1>
-            <form onSubmit={handleOnSubmit}>
-                <input 
-                type='Search'
-                placeholder='Buscar'
-                value={termoBusca}
-                onChange={handleOnChange}
-                />
-            </form>
-        </header>
+                <form onSubmit={handleOnSubmit}>
+                    <input type="text" placeholder="Titulo" value={termoBusca} onChange={handleOnChangeTermo}/>
+                    <input type="text" placeholder="Ano" value={anoBusca} onChange={handleOnChangeAno}/>
+                    <input type="submit"/> <br/>
+                </form>
+            </header>
+        </>
     )
 }
 
